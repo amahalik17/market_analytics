@@ -1,0 +1,8 @@
+
+
+TA-Lib
+flask
+pandas
+numpy
+
+
