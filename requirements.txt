@@ -1,8 +1,8 @@
 
-
 TA-Lib
 flask
 pandas
 numpy
-
-
+bs4
+os
+requests

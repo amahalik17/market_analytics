@@ -1,0 +1,504 @@
+Ticker,Name
+MMM,3
+AOS,A. O. Smit
+ABT,Abbott Laboratorie
+ABBV,AbbVi
+ACN,Accentur
+ADBE,Adobe Inc
+AMD,Advanced Micro Device
+AES,AES Corporatio
+AFL,Afla
+A,Agilent Technologie
+APD,Air Product
+ABNB,Airbn
+AKAM,Akamai Technologie
+ALB,Albemarle Corporatio
+ARE,Alexandria Real Estate Equitie
+ALGN,Align Technolog
+ALLE,Allegio
+LNT,Alliant Energ
+ALL,Allstat
+GOOGL,Alphabet Inc. (Class A
+GOOG,Alphabet Inc. (Class C
+MO,Altri
+AMZN,Amazo
+AMCR,Amco
+AEE,Amere
+AAL,American Airlines Grou
+AEP,American Electric Powe
+AXP,American Expres
+AIG,American International Grou
+AMT,American Towe
+AWK,American Water Work
+AMP,Ameriprise Financia
+AME,Amete
+AMGN,Amge
+APH,Ampheno
+ADI,Analog Device
+ANSS,Ansy
+AON,Ao
+APA,APA Corporatio
+AAPL,Apple Inc
+AMAT,Applied Material
+APTV,Apti
+ACGL,Arch Capital Grou
+ADM,Archer Daniels Midlan
+ANET,Arista Network
+AJG,Arthur J. Gallagher & Co
+AIZ,Assuran
+T,AT&
+ATO,Atmos Energ
+ADSK,Autodes
+ADP,Automatic Data Processin
+AZO,AutoZon
+AVB,AvalonBay Communitie
+AVY,Avery Denniso
+AXON,Axon Enterpris
+BKR,Baker Hughe
+BALL,Ball Corporatio
+BAC,Bank of Americ
+BK,BNY Mello
+BBWI,"Bath & Body Works, Inc"
+BAX,Baxter Internationa
+BDX,Becton Dickinso
+BRK.B,Berkshire Hathawa
+BBY,Best Bu
+BIO,Bio-Rad Laboratorie
+TECH,Bio-Techn
+BIIB,Bioge
+BLK,BlackRoc
+BX,Blackstone Inc
+BA,Boein
+BKNG,Booking Holding
+BWA,BorgWarne
+BSX,Boston Scientifi
+BMY,Bristol Myers Squib
+AVGO,Broadco
+BR,Broadridge Financial Solution
+BRO,Brown & Brow
+BF.B,Brown–Forma
+BLDR,Builders FirstSourc
+BG,Bunge Globa
+BXP,"BXP, Inc"
+CHRW,C.H. Robinso
+CDNS,Cadence Design System
+CZR,Caesars Entertainmen
+CPT,Camden Property Trus
+CPB,Campbell Soup Compan
+COF,Capital On
+CAH,Cardinal Healt
+KMX,CarMa
+CCL,Carniva
+CARR,Carrier Globa
+CTLT,Catalen
+CAT,Caterpillar Inc
+CBOE,Cboe Global Market
+CBRE,CBRE Grou
+CDW,CD
+CE,Celanes
+COR,Cencor
+CNC,Centene Corporatio
+CNP,CenterPoint Energ
+CF,CF Industrie
+CRL,Charles River Laboratorie
+SCHW,Charles Schwab Corporatio
+CHTR,Charter Communication
+CVX,Chevron Corporatio
+CMG,Chipotle Mexican Gril
+CB,Chubb Limite
+CHD,Church & Dwigh
+CI,Cign
+CINF,Cincinnati Financia
+CTAS,Cinta
+CSCO,Cisc
+C,Citigrou
+CFG,Citizens Financial Grou
+CLX,Cloro
+CME,CME Grou
+CMS,CMS Energ
+KO,Coca-Cola Company (The
+CTSH,Cognizan
+CL,Colgate-Palmoliv
+CMCSA,Comcas
+CAG,Conagra Brand
+COP,ConocoPhillip
+ED,Consolidated Ediso
+STZ,Constellation Brand
+CEG,Constellation Energ
+COO,Cooper Companies (The
+CPRT,Copar
+GLW,Corning Inc
+CPAY,Corpa
+CTVA,Cortev
+CSGP,CoStar Grou
+COST,Costc
+CTRA,Coterr
+CRWD,CrowdStrik
+CCI,Crown Castl
+CSX,CSX Corporatio
+CMI,Cummin
+CVS,CVS Healt
+DHR,Danaher Corporatio
+DRI,Darden Restaurant
+DVA,DaVit
+DAY,Dayforc
+DECK,Deckers Brand
+DE,Deere & Compan
+DAL,Delta Air Line
+DVN,Devon Energ
+DXCM,Dexco
+FANG,Diamondback Energ
+DLR,Digital Realt
+DFS,Discover Financia
+DG,Dollar Genera
+DLTR,Dollar Tre
+D,Dominion Energ
+DPZ,Domino'
+DOV,Dover Corporatio
+DOW,Dow Inc
+DHI,DR Horto
+DTE,DTE Energ
+DUK,Duke Energ
+DD,DuPon
+EMN,Eastman Chemical Compan
+ETN,Eaton Corporatio
+EBAY,eBa
+ECL,Ecola
+EIX,Edison Internationa
+EW,Edwards Lifescience
+EA,Electronic Art
+ELV,Elevance Healt
+EMR,Emerson Electri
+ENPH,Enphas
+ETR,Enterg
+EOG,EOG Resource
+EPAM,EPAM System
+EQT,EQT Corporatio
+EFX,Equifa
+EQIX,Equini
+EQR,Equity Residentia
+ESS,Essex Property Trus
+EL,Estée Lauder Companies (The
+ETSY,Ets
+EG,Everest Grou
+EVRG,Everg
+ES,Eversourc
+EXC,Exelo
+EXPE,Expedia Grou
+EXPD,Expeditors Internationa
+EXR,Extra Space Storag
+XOM,ExxonMobi
+FFIV,"F5, Inc"
+FDS,FactSe
+FICO,Fair Isaa
+FAST,Fastena
+FRT,Federal Realt
+FDX,FedE
+FIS,Fidelity National Information Service
+FITB,Fifth Third Ban
+FSLR,First Sola
+FE,FirstEnerg
+FI,Fiser
+FMC,FMC Corporatio
+F,Ford Motor Compan
+FTNT,Fortine
+FTV,Fortiv
+FOXA,Fox Corporation (Class A
+FOX,Fox Corporation (Class B
+BEN,Franklin Templeto
+FCX,Freeport-McMoRa
+GRMN,Garmi
+IT,Gartne
+GE,GE Aerospac
+GEHC,GE HealthCar
+GEV,GE Vernov
+GEN,Gen Digita
+GNRC,Genera
+GD,General Dynamic
+GIS,General Mill
+GM,General Motor
+GPC,Genuine Parts Compan
+GILD,Gilead Science
+GPN,Global Payment
+GL,Globe Lif
+GDDY,GoDadd
+GS,Goldman Sach
+HAL,Halliburto
+HIG,Hartford (The
+HAS,Hasbr
+HCA,HCA Healthcar
+DOC,Healthpeak Propertie
+HSIC,Henry Schei
+HSY,Hershey Company (The
+HES,Hess Corporatio
+HPE,Hewlett Packard Enterpris
+HLT,Hilton Worldwid
+HOLX,Hologi
+HD,Home Depot (The
+HON,Honeywel
+HRL,Hormel Food
+HST,Host Hotels & Resort
+HWM,Howmet Aerospac
+HPQ,HP Inc
+HUBB,Hubbell Incorporate
+HUM,Human
+HBAN,Huntington Bancshare
+HII,Huntington Ingalls Industrie
+IBM,IB
+IEX,IDEX Corporatio
+IDXX,Idexx Laboratorie
+ITW,Illinois Tool Work
+INCY,Incyt
+IR,Ingersoll Ran
+PODD,Insulet Corporatio
+INTC,Inte
+ICE,Intercontinental Exchang
+IFF,International Flavors & Fragrance
+IP,International Pape
+IPG,Interpublic Group of Companies (The
+INTU,Intui
+ISRG,Intuitive Surgica
+IVZ,Invesc
+INVH,Invitation Home
+IQV,IQVI
+IRM,Iron Mountai
+JBHT,J.B. Hun
+JBL,Jabi
+JKHY,Jack Henry & Associate
+J,Jacobs Solution
+JNJ,Johnson & Johnso
+JCI,Johnson Control
+JPM,JPMorgan Chas
+JNPR,Juniper Network
+K,Kellanov
+KVUE,Kenvu
+KDP,Keurig Dr Peppe
+KEY,KeyCor
+KEYS,Keysigh
+KMB,Kimberly-Clar
+KIM,Kimco Realt
+KMI,Kinder Morga
+KKR,KK
+KLAC,KLA Corporatio
+KHC,Kraft Hein
+KR,Kroge
+LHX,L3Harri
+LH,LabCor
+LRCX,Lam Researc
+LW,Lamb Westo
+LVS,Las Vegas Sand
+LDOS,Leido
+LEN,Lenna
+LLY,Lilly (Eli
+LIN,Linde pl
+LYV,Live Nation Entertainmen
+LKQ,LKQ Corporatio
+LMT,Lockheed Marti
+L,Loews Corporatio
+LOW,Lowe'
+LULU,Lululemon Athletic
+LYB,LyondellBasel
+MTB,M&T Ban
+MRO,Marathon Oi
+MPC,Marathon Petroleu
+MKTX,MarketAxes
+MAR,Marriott Internationa
+MMC,Marsh McLenna
+MLM,Martin Marietta Material
+MAS,Masc
+MA,Mastercar
+MTCH,Match Grou
+MKC,McCormick & Compan
+MCD,McDonald'
+MCK,McKesson Corporatio
+MDT,Medtroni
+MRK,Merck & Co
+META,Meta Platform
+MET,MetLif
+MTD,Mettler Toled
+MGM,MGM Resort
+MCHP,Microchip Technolog
+MU,Micron Technolog
+MSFT,Microsof
+MAA,Mid-America Apartment Communitie
+MRNA,Modern
+MHK,Mohawk Industrie
+MOH,Molina Healthcar
+TAP,Molson Coors Beverage Compan
+MDLZ,Mondelez Internationa
+MPWR,Monolithic Power System
+MNST,Monster Beverag
+MCO,Moody's Corporatio
+MS,Morgan Stanle
+MOS,Mosaic Company (The
+MSI,Motorola Solution
+MSCI,MSC
+NDAQ,"Nasdaq, Inc"
+NTAP,NetAp
+NFLX,Netfli
+NEM,Newmon
+NWSA,News Corp (Class A
+NWS,News Corp (Class B
+NEE,NextEra Energ
+NKE,"Nike, Inc"
+NI,NiSourc
+NDSN,Nordson Corporatio
+NSC,Norfolk Southern Railwa
+NTRS,Northern Trus
+NOC,Northrop Grumma
+NCLH,Norwegian Cruise Line Holding
+NRG,NRG Energ
+NUE,Nuco
+NVDA,Nvidi
+NVR,"NVR, Inc"
+NXPI,NXP Semiconductor
+ORLY,O'Reilly Auto Part
+OXY,Occidental Petroleu
+ODFL,Old Dominio
+OMC,Omnicom Grou
+ON,ON Semiconducto
+OKE,ONEO
+ORCL,Oracle Corporatio
+OTIS,Otis Worldwid
+PCAR,Pacca
+PKG,Packaging Corporation of Americ
+PANW,Palo Alto Network
+PARA,Paramount Globa
+PH,Parker Hannifi
+PAYX,Payche
+PAYC,Payco
+PYPL,PayPa
+PNR,Pentai
+PEP,PepsiC
+PFE,Pfize
+PCG,PG&E Corporatio
+PM,Philip Morris Internationa
+PSX,Phillips 6
+PNW,Pinnacle Wes
+PNC,PNC Financial Service
+POOL,Pool Corporatio
+PPG,PPG Industrie
+PPL,PPL Corporatio
+PFG,Principal Financial Grou
+PG,Procter & Gambl
+PGR,Progressive Corporatio
+PLD,Prologi
+PRU,Prudential Financia
+PEG,Public Service Enterprise Grou
+PTC,PT
+PSA,Public Storag
+PHM,PulteGrou
+QRVO,Qorv
+PWR,Quanta Service
+QCOM,Qualcom
+DGX,Quest Diagnostic
+RL,Ralph Lauren Corporatio
+RJF,Raymond Jame
+RTX,RTX Corporatio
+O,Realty Incom
+REG,Regency Center
+REGN,Regenero
+RF,Regions Financial Corporatio
+RSG,Republic Service
+RMD,ResMe
+RVTY,Revvit
+ROK,Rockwell Automatio
+ROL,"Rollins, Inc"
+ROP,Roper Technologie
+ROST,Ross Store
+RCL,Royal Caribbean Grou
+SPGI,S&P Globa
+CRM,Salesforc
+SBAC,SBA Communication
+SLB,Schlumberge
+STX,Seagate Technolog
+SRE,Sempr
+NOW,ServiceNo
+SHW,Sherwin-William
+SPG,Simon Property Grou
+SWKS,Skyworks Solution
+SJM,J.M. Smucker Company (The
+SW,Smurfit WestRoc
+SNA,Snap-o
+SOLV,Solventu
+SO,Southern Compan
+LUV,Southwest Airline
+SWK,Stanley Black & Decke
+SBUX,Starbuck
+STT,State Street Corporatio
+STLD,Steel Dynamic
+STE,Steri
+SYK,Stryker Corporatio
+SMCI,Supermicr
+SYF,Synchrony Financia
+SNPS,Synopsy
+SYY,Sysc
+TMUS,T-Mobile U
+TROW,T. Rowe Pric
+TTWO,Take-Two Interactiv
+TPR,"Tapestry, Inc"
+TRGP,Targa Resource
+TGT,Target Corporatio
+TEL,TE Connectivit
+TDY,Teledyne Technologie
+TFX,Telefle
+TER,Teradyn
+TSLA,"Tesla, Inc"
+TXN,Texas Instrument
+TXT,Textro
+TMO,Thermo Fisher Scientifi
+TJX,TJX Companie
+TSCO,Tractor Suppl
+TT,Trane Technologie
+TDG,TransDigm Grou
+TRV,Travelers Companies (The
+TRMB,Trimble Inc
+TFC,Truis
+TYL,Tyler Technologie
+TSN,Tyson Food
+USB,U.S. Ban
+UBER,Ube
+UDR,"UDR, Inc"
+ULTA,Ulta Beaut
+UNP,Union Pacific Corporatio
+UAL,United Airlines Holding
+UPS,United Parcel Servic
+URI,United Rental
+UNH,UnitedHealth Grou
+UHS,Universal Health Service
+VLO,Valero Energ
+VTR,Venta
+VLTO,Veralt
+VRSN,Verisig
+VRSK,Veris
+VZ,Verizo
+VRTX,Vertex Pharmaceutical
+VTRS,Viatri
+VICI,Vici Propertie
+V,Visa Inc
+VST,Vistr
+VMC,Vulcan Materials Compan
+WRB,W. R. Berkley Corporatio
+GWW,W. W. Grainge
+WAB,Wabte
+WBA,Walgreens Boots Allianc
+WMT,Walmar
+DIS,Walt Disney Company (The
+WBD,Warner Bros. Discover
+WM,Waste Managemen
+WAT,Waters Corporatio
+WEC,WEC Energy Grou
+WFC,Wells Farg
+WELL,Welltowe
+WST,West Pharmaceutical Service
+WDC,Western Digita
+WY,Weyerhaeuse
+WMB,Williams Companie
+WTW,Willis Towers Watso
+WYNN,Wynn Resort
+XEL,Xcel Energ
+XYL,Xylem Inc
+YUM,Yum! Brand
+ZBRA,Zebra Technologie
+ZBH,Zimmer Biome
+ZTS,Zoeti
