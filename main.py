@@ -5,15 +5,16 @@ import requests
 from auth import get_access_token
 from db import insert_data
 
+
 # Test with smaller list at first
-# fav_tickers_list = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'TSLA', 'AMD', 'NVDA', 'NFLX', 'META', 'CVS', 'JPM', 'SQ', 'LMT', 'CVX', 'SPY', 'QQQ', 'IWM', 'DIA', 'GLD', 'VXX']
-fund_tickers_list = ['SPY', 'QQQ', 'IWM', 'DIA', 'GLD', 'VXX']
+# fav_tickers_list = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'TSLA', 'AMD', 'NVDA', 'NFLX', 'META', 'CVS', 'JPM', 'SQ', 'LMT', 'CVX']
+# fund_tickers_list = ['SPY', 'QQQ', 'IWM', 'DIA', 'GLD', 'VXX']
 
-# # Read the CSV file into a DataFrame
-# tickers_names_df = pd.read_csv('Market_Data/sp500_list.csv')
+# Read the CSV file into a DataFrame
+tickers_names_df = pd.read_csv('Market_Data/sp500_list.csv')
 
-# # turn csv columns into lists
-# tickers_list = tickers_names_df['Ticker'].tolist()
+# turn csv columns into lists
+tickers_list = tickers_names_df['Ticker'].tolist()
 # names_list = tickers_names_df['Name'].tolist()
 # # print(tickers_list)
 # # print(names_list)
@@ -38,7 +39,7 @@ headers = {
 all_data = []
 
 # Iterate through the list of tickers and fetch price history for each
-for ticker in fund_tickers_list:
+for ticker in tickers_list:
     one_yr_url = f'{base_url}/pricehistory?symbol={ticker}&periodType=year&period=1&frequencyType=daily&needExtendedHoursData=false&needPreviousClose=false'
     # Make the API request
     response = requests.get(one_yr_url, headers=headers)
@@ -74,7 +75,6 @@ df = df.drop(columns=['datetime'])
 # Reorder the columns to match the table schema
 df = df[['ticker', 'date', 'open', 'high', 'low', 'close', 'volume']]
 
-
 # Convert columns to appropriate types
 df['open'] = df['open'].astype(float)
 df['high'] = df['high'].astype(float)
@@ -82,8 +82,7 @@ df['low'] = df['low'].astype(float)
 df['close'] = df['close'].astype(float)
 df['volume'] = df['volume'].astype(int)
 
-# Display the DataFrame
-print(df)
+# print(df)
 
 # Insert the data into the PostgreSQL db
 insert_data(df)
