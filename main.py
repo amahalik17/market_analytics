@@ -3,21 +3,19 @@ import pandas as pd
 from datetime import datetime, date
 import requests
 from auth import get_access_token
-from db import insert_data
+from db import insert_data, fetch_price_data
+from indicators import calculate_rsi
 
-
-# Test with smaller list at first
-# fav_tickers_list = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'TSLA', 'AMD', 'NVDA', 'NFLX', 'META', 'CVS', 'JPM', 'SQ', 'LMT', 'CVX']
-# fund_tickers_list = ['SPY', 'QQQ', 'IWM', 'DIA', 'GLD', 'VXX']
 
 # Read the CSV file into a DataFrame
 tickers_names_df = pd.read_csv('Market_Data/sp500_list.csv')
 
 # turn csv columns into lists
 tickers_list = tickers_names_df['Ticker'].tolist()
-# names_list = tickers_names_df['Name'].tolist()
-# # print(tickers_list)
-# # print(names_list)
+
+# Test with smaller list at first
+fav_tickers_list = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'TSLA', 'AMD', 'NVDA', 'NFLX', 'META', 'CVS', 'JPM', 'SQ', 'LMT', 'CVX']
+fund_tickers_list = ['SPY', 'QQQ', 'IWM', 'DIA', 'GLD', 'VXX']
 
 # Get the access token from auth.py
 access_token = get_access_token()
@@ -25,21 +23,22 @@ access_token = get_access_token()
 # Set the base URL for the price history endpoint
 base_url = 'https://api.schwabapi.com/marketdata/v1'
 
+# # Endpoints for future use
+# price_history_url = f'{base_url}/pricehistory?symbol={ticker}&periodType=month'
+# one_yr_url = f'{base_url}/pricehistory?symbol={ticker}&periodType=year&frequencyType=daily'
+# three_month_url = f'{base_url}/pricehistory?symbol={ticker}&periodType=month&period=3&frequencyType=daily'
+
+
 # Add Authorization header with the access token
 headers = {
     'Authorization': f'Bearer {access_token}'
 }
 
-# Endpoints for future use
-# price_history_url = f'{base_url}/pricehistory?symbol={ticker}&periodType=month'
-# one_yr_url = f'{base_url}/pricehistory?symbol={ticker}&periodType=year&frequencyType=daily'
-# three_month_url = f'{base_url}/pricehistory?symbol={ticker}&periodType=month&period=3&frequencyType=daily'
-
 # Create an empty list to store all the data
 all_data = []
 
 # Iterate through the list of tickers and fetch price history for each
-for ticker in tickers_list:
+for ticker in fav_tickers_list:
     one_yr_url = f'{base_url}/pricehistory?symbol={ticker}&periodType=year&period=1&frequencyType=daily&needExtendedHoursData=false&needPreviousClose=false'
     # Make the API request
     response = requests.get(one_yr_url, headers=headers)
@@ -86,4 +85,15 @@ df['volume'] = df['volume'].astype(int)
 
 # Insert the data into the PostgreSQL db
 insert_data(df)
+
+
+# Loop over each ticker and calculate RSI
+for ticker in fav_tickers_list:
+    # Get price data for the ticker
+    price_data = fetch_price_data(ticker, limit=50)
+    rsi = calculate_rsi(price_data)
+    rsi = rsi.dropna()
+    print(f"RSI for {ticker}:")
+    print(rsi)
+
 
