@@ -4,8 +4,12 @@ from datetime import datetime, date
 import requests
 from auth import get_access_token
 from db import insert_data, fetch_price_data
-from indicators import calculate_rsi
+from indicators import calculate_rsi, rsi_divergence
 
+
+# # Set display options for viewing full DataFrames
+# pd.set_option('display.max_rows', None)
+# pd.set_option('display.max_columns', None)
 
 # Read the CSV file into a DataFrame
 tickers_names_df = pd.read_csv('Market_Data/sp500_list.csv')
@@ -87,13 +91,50 @@ df['volume'] = df['volume'].astype(int)
 insert_data(df)
 
 
-# Loop over each ticker and calculate RSI
-for ticker in fav_tickers_list:
-    # Get price data for the ticker
-    price_data = fetch_price_data(ticker, limit=50)
-    rsi = calculate_rsi(price_data)
-    rsi = rsi.dropna()
-    print(f"RSI for {ticker}:")
-    print(rsi)
+def rsi_df():
+
+    # Loop over each ticker and calculate RSI
+    for ticker in fav_tickers_list:
+        # Get price data for the ticker
+        price_data = fetch_price_data(ticker, limit=50)
+        # Calculate RSI
+        rsi = calculate_rsi(price_data).dropna()
+        print(f"RSI for {ticker}:")
+        print(rsi)
 
 
+
+def rsi_divergence_df():
+    
+    all_divergences = []
+
+    # Loop through each ticker in list
+    for ticker in fav_tickers_list:
+        # Fetch price data for the ticker
+        price_data = fetch_price_data(ticker, limit=50)
+        # Check if we have enough data
+        if price_data is not None and len(price_data) >= 14:
+            # Calculate RSI divergence
+            divergence_df = rsi_divergence(price_data, ticker, period=14)
+            # Append to the list if divergences are found
+            if not divergence_df.empty:
+                all_divergences.append(divergence_df)
+
+    # Combine all divergence data into a single DataFrame
+    if all_divergences:
+        combined_divergences = pd.concat(all_divergences, ignore_index=True)
+        print(combined_divergences)
+    else:
+        print("No divergences found.")
+
+
+
+
+# Main function to call your loops or add additional logic
+def main():
+    rsi_df()
+    #rsi_divergence_df()
+
+
+if __name__ == "__main__":
+    main()
