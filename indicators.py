@@ -15,9 +15,9 @@ def calculate_rsi(df, period=14, column='close'):
     
     # Calculate the RSI
     rs = gain / loss
-    rsi = (100 - (100 / (1 + rs))).round(0)
+    df['RSI'] = (100 - (100 / (1 + rs))).round(0)
 
-    return rsi
+    return df
 
 
 # Rsi_divergence function to output detailed DataFrame
@@ -25,7 +25,7 @@ def rsi_divergence(df, ticker, period=14, column='close'):
     if not isinstance(period, int) or period <= 0:
         raise ValueError("The 'period' parameter must be an integer greater than 0.")
     # Calculate RSI
-    df['RSI'] = calculate_rsi(df, ticker, period, column)['RSI']
+    df = calculate_rsi(df, period, column)
 
     # Initialize columns for divergence types
     df['Bullish_Divergence'] = False

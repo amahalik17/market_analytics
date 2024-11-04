@@ -131,10 +131,10 @@ def rsi_divergence_df():
 
 
 # Main function to call your loops or add additional logic
-def main():
-    rsi_df()
-    #rsi_divergence_df()
+# def main():
+#     #rsi_df()
+#     #rsi_divergence_df()
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
