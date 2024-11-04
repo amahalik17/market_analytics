@@ -20,6 +20,7 @@ def calculate_rsi(df, period=14, column='close'):
     return df
 
 
+
 # Rsi_divergence function to output detailed DataFrame
 def rsi_divergence(df, ticker, period=14, column='close'):
     if not isinstance(period, int) or period <= 0:
@@ -56,4 +57,55 @@ def rsi_divergence(df, ticker, period=14, column='close'):
     divergence_df = divergence_df[['Ticker', 'date', 'RSI', 'Bullish_Divergence', 'Bearish_Divergence']]
 
     return divergence_df
+
+
+
+# Fibonacci retracement levels in percentages
+fib_levels = [0.236, 0.382, 0.5, 0.618, 0.786]
+
+def fib_retracement(df, column='close'):
+    # Find the recent high and low within the DataFrame
+    high = df[column].max()
+    low = df[column].min()
+
+    # Calculate Fibonacci retracement levels
+    fib_levels = {}
+    for level in fib_levels:
+        retracement_level = high - (high - low) * level
+        fib_levels[f"Level_{int(level*100)}%"] = retracement_level
+
+    # Add the high and low for reference
+    fib_levels["High"] = high
+    fib_levels["Low"] = low
+
+    # Create a DataFrame for displaying the levels
+    fib_df = pd.DataFrame(fib_levels, index=[0])
+    return fib_df
+
+
+
+# TTM Squeeze Indicator
+def ttm_squeeze(df, period=20, stddev_multiplier=2, atr_multiplier=1.5, column='close'):
+    # Calculate Bollinger Bands
+    df['SMA'] = df[column].rolling(window=period).mean()
+    df['Bollinger_Upper'] = df['SMA'] + stddev_multiplier * df[column].rolling(window=period).std()
+    df['Bollinger_Lower'] = df['SMA'] - stddev_multiplier * df[column].rolling(window=period).std()
+
+    # Calculate Keltner Channels
+    df['ATR'] = df['high'].rolling(window=period).max() - df['low'].rolling(window=period).min()
+    df['Keltner_Upper'] = df['SMA'] + atr_multiplier * df['ATR']
+    df['Keltner_Lower'] = df['SMA'] - atr_multiplier * df['ATR']
+
+    # Determine squeeze
+    df['Squeeze_On'] = (df['Bollinger_Lower'] > df['Keltner_Lower']) & (df['Bollinger_Upper'] < df['Keltner_Upper'])
+    df['Squeeze_Off'] = (df['Bollinger_Lower'] <= df['Keltner_Lower']) | (df['Bollinger_Upper'] >= df['Keltner_Upper'])
+
+    # Calculate momentum using a simple rate of change or RSI for direction
+    df['Momentum'] = (df[column] - df[column].shift(period)).fillna(0)
+
+    # Clean up DataFrame to show only necessary columns
+    result = df[['date', column, 'Bollinger_Upper', 'Bollinger_Lower', 'Keltner_Upper', 'Keltner_Lower', 'Squeeze_On', 'Squeeze_Off', 'Momentum']]
+
+    return result
+
 
